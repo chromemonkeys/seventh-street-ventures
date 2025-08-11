@@ -2,21 +2,33 @@
 
 import Slide from "@/components/slide"
 import { motion } from "framer-motion"
-import { FileText, DollarSign, Target, Bot, ReceiptText, TrendingUp } from "lucide-react"
+import { FileText, DollarSign, Target, Bot, ReceiptText, TrendingUp, Users, Globe, Zap } from "lucide-react"
 
 export default function SlideTenOnboarding() {
   const onboardingSteps = [
     {
-      title: "Big picture strategy",
+      title: "Strategic positioning",
       description:
-        "How to strategically position Mulga’s value prop when there’s lots of high well funded tech players competing in the space.",
+        "How to compete against bigger, better-funded players and what moats you can actually build",
       icon: Target,
     },
     {
-      title: "Potential collaborators",
+      title: "Market expansion",
       description:
-        "Inside or outside the defence space that could be leveraged — e.g. university partnerships, adjacent technologies and applications.",
-      icon: FileText,
+        "Different applications for the tech, which countries/organizations need it most, and how to build inroads",
+      icon: Globe,
+    },
+    {
+      title: "Smart partnerships",
+      description:
+        "Universities, adjacent tech, non-defense applications that could accelerate development",
+      icon: Users,
+    },
+    {
+      title: "Scaling challenges",
+      description:
+        "Balancing custom solutions vs standardized products, and navigating hardware supply chain risks",
+      icon: Zap,
     },
   ]
 

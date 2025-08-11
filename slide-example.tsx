@@ -5,51 +5,52 @@ import { ArrowRight, Play } from "lucide-react"
 
 export default function SlideExample() {
   return (
-    <Slide className="relative bg-[#FDFBF8] p-4 md:p-8 lg:p-12">
-      <div className="relative z-10 w-full max-w-6xl mx-auto space-y-4 sm:space-y-6 lg:space-y-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-          {/* Left side - Content */}
-          <div className="space-y-4 sm:space-y-8 text-left">
-            <h1 className="text-2xl font-extrabold tracking-tight sm:text-3xl lg:text-6xl text-gray-900">Example</h1>
-            
-            <div className="space-y-2 sm:space-y-4">
-              <div className="flex items-start space-x-2 sm:space-x-3">
-                <ArrowRight className="mt-0.5 h-4 w-4 flex-shrink-0 text-gray-600 sm:mt-1 sm:h-5 sm:w-5" />
-                <p className="text-sm text-gray-700 sm:text-base">
-                  Simple acoustic triangulation proof of concept - turned out to be way more complex than expected, which was actually really valuable
-                </p>
-              </div>
-              <div className="flex items-start space-x-2 sm:space-x-3">
-                <ArrowRight className="mt-0.5 h-4 w-4 flex-shrink-0 text-gray-600 sm:mt-1 sm:h-5 sm:w-5" />
-                <p className="text-sm text-gray-700 sm:text-base">
-                  Event detection dilemma - do you try to identify threats first (more false negatives) or capture everything then classify (more false positives)?
-                </p>
-              </div>
-              <div className="flex items-start space-x-2 sm:space-x-3">
-                <ArrowRight className="mt-0.5 h-4 w-4 flex-shrink-0 text-gray-600 sm:mt-1 sm:h-5 sm:w-5" />
-                <p className="text-sm text-gray-700 sm:text-base">
-                  Data capture strategy - focus on volume spikes above background noise, or track frequency changes, or both?
-                </p>
-              </div>
-              <div className="flex items-start space-x-2 sm:space-x-3">
-                <ArrowRight className="mt-0.5 h-4 w-4 flex-shrink-0 text-gray-600 sm:mt-1 sm:h-5 sm:w-5" />
-                <p className="text-sm text-gray-700 sm:text-base">
-                  Background noise is brutal - how do you filter out wind, traffic, machinery without losing actual threats?
-                </p>
-              </div>
-            </div>
-          </div>
+    <Slide className="relative bg-[#FDFBF8] p-4 md:p-8 lg:p-12 overflow-hidden flex flex-col justify-center items-center">
+      {/* Subtle background gradient */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          background: "linear-gradient(to left, rgba(243, 205, 162, 0.1), rgba(216, 207, 240, 0.1))",
+        }}
+      />
 
-          {/* Right side - Video Placeholder */}
-          <div className="flex items-center justify-center">
-            <div className="relative w-full max-w-md aspect-video bg-gray-100 rounded-xl border-2 border-dashed border-gray-300 flex flex-col items-center justify-center space-y-4 hover:bg-gray-50 transition-colors duration-200">
-              <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center">
-                <Play className="w-8 h-8 text-gray-500 ml-1" />
-              </div>
-              <div className="text-center space-y-1">
-                <p className="text-sm font-medium text-gray-600">Video Placeholder</p>
-                <p className="text-xs text-gray-500">Demo or explanation video</p>
-              </div>
+      <div className="relative z-10 w-full max-w-7xl mx-auto space-y-8 md:space-y-12 lg:space-y-16">
+        {/* Header */}
+        <div className="text-center space-y-4 md:space-y-6">
+          <h1 className="text-2xl font-extrabold tracking-tight sm:text-3xl lg:text-6xl text-gray-900">Weekend Hackathon Example</h1>
+          <p className="text-base md:text-lg lg:text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto">
+            Attempting to create a system that finds the location of ANY acoustic anomaly using Time Delay of Arrival logic to triangulate the object in a 2D or 3D space. But actually just in my room.
+          </p>
+        </div>
+
+        {/* Video Section */}
+        <div className="flex justify-center">
+          <div className="relative w-full max-w-5xl">
+            <div className="relative">
+              <video 
+                className="w-full aspect-video rounded-2xl shadow-xl border border-gray-200/50 bg-black"
+                controls
+                preload="metadata"
+                poster=""
+              >
+                <source src="/videos/TDOA-triangulation.webm" type="video/webm" />
+                <div className="absolute inset-0 flex items-center justify-center bg-gray-100 rounded-2xl">
+                  <div className="text-center space-y-2 p-6">
+                    <p className="text-sm md:text-base text-gray-600">
+                      Your browser doesn't support video playback.
+                    </p>
+                    <a 
+                      href="/videos/TDOA-triangulation.webm" 
+                      className="inline-block text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200"
+                    >
+                      Download the video instead
+                    </a>
+                  </div>
+                </div>
+              </video>
+              
+              {/* Video overlay for better visual appeal */}
+              <div className="absolute inset-0 rounded-2xl ring-1 ring-black/5 pointer-events-none"></div>
             </div>
           </div>
         </div>

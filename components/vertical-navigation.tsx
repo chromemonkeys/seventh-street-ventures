@@ -22,19 +22,17 @@ export default function VerticalNavigation({
 }: VerticalNavigationProps) {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
 
-  // One-word descriptions for each slide
+  // Empty descriptions for cleaner look
   const slideDescriptions = [
-    "Section 1",
-    "Section 2",
-    "Section 3",
-    "Section 4",
-    "Section 5",
-    "Section 6",
-    "Section 7",
-    "Section 8",
-    "Section 9",
-    "Section 10",
-    "Section 11",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
   ]
 
   return (
@@ -43,13 +41,13 @@ export default function VerticalNavigation({
       <div className="flex justify-end">
         <button
           onClick={toggleFullScreen}
-          className="h-4 w-4 rounded-full bg-[#CBD5E1] hover:bg-[#FFEDD5] hover:shadow-sm transition-colors duration-300 ease-out focus:outline-none flex items-center justify-center"
+          className="h-6 w-6 rounded-full bg-[#CBD5E1] hover:bg-[#FFEDD5] hover:shadow-sm transition-colors duration-300 ease-out focus:outline-none flex items-center justify-center"
           aria-label={isFullScreen ? "Exit full screen" : "Enter full screen"}
         >
           {isFullScreen ? (
-            <Minimize className="h-2.5 w-2.5 text-gray-700" />
+            <Minimize className="h-3.5 w-3.5 text-gray-700" />
           ) : (
-            <Maximize className="h-2.5 w-2.5 text-gray-700" />
+            <Maximize className="h-3.5 w-3.5 text-gray-700" />
           )}
         </button>
       </div>
@@ -57,12 +55,12 @@ export default function VerticalNavigation({
       {/* Up Arrow Button - aligned to right */}
       <div className="flex justify-end">
         <button
-          className="h-4 w-4 rounded-full bg-[#CBD5E1] hover:bg-[#FFEDD5] hover:shadow-sm transition-colors duration-300 ease-out disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+          className="h-6 w-6 rounded-full bg-[#CBD5E1] hover:bg-[#FFEDD5] hover:shadow-sm transition-colors duration-300 ease-out disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
           onClick={() => onDotClick(activeSlideIndex - 1)}
           disabled={activeSlideIndex === 0}
           aria-label="Go to previous slide"
         >
-          <ChevronUp className="h-2.5 w-2.5 text-gray-700" />
+          <ChevronUp className="h-3.5 w-3.5 text-gray-700" />
         </button>
       </div>
 
@@ -75,21 +73,23 @@ export default function VerticalNavigation({
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
           >
+            {slideDescriptions[index] && (
+              <button
+                className={`text-[10px] text-right transition-all duration-300 ease-out cursor-pointer ${
+                  activeSlideIndex === index
+                    ? "text-gray-600 opacity-80"
+                    : hoveredIndex === index
+                      ? "text-gray-600 opacity-100"
+                      : "text-gray-500 opacity-40"
+                }`}
+                onClick={() => onDotClick(index)}
+                aria-label={`Go to slide ${index + 1}`}
+              >
+                {slideDescriptions[index]}
+              </button>
+            )}
             <button
-              className={`text-[10px] text-right transition-all duration-300 ease-out cursor-pointer ${
-                activeSlideIndex === index
-                  ? "text-gray-600 opacity-80"
-                  : hoveredIndex === index
-                    ? "text-gray-600 opacity-100"
-                    : "text-gray-500 opacity-40"
-              }`}
-              onClick={() => onDotClick(index)}
-              aria-label={`Go to slide ${index + 1}: ${slideDescriptions[index]}`}
-            >
-              {slideDescriptions[index]}
-            </button>
-            <button
-              className={`h-4 w-4 rounded-full transition-all duration-300 ease-out focus:outline-none flex items-center justify-center text-[9px] font-medium ${
+              className={`h-6 w-6 rounded-full transition-all duration-300 ease-out focus:outline-none flex items-center justify-center text-[11px] font-medium ${
                 activeSlideIndex === index
                   ? "bg-[#D8CFF0] shadow-md text-gray-800"
                   : hoveredIndex === index
@@ -97,7 +97,7 @@ export default function VerticalNavigation({
                     : "bg-[#CBD5E1] text-gray-600"
               }`}
               onClick={() => onDotClick(index)}
-              aria-label={`Go to slide ${index + 1}: ${slideDescriptions[index]}`}
+              aria-label={`Go to slide ${index + 1}`}
             >
               {index + 1}
             </button>
@@ -108,12 +108,12 @@ export default function VerticalNavigation({
       {/* Down Arrow Button - aligned to right */}
       <div className="flex justify-end">
         <button
-          className="h-4 w-4 rounded-full bg-[#CBD5E1] hover:bg-[#FFEDD5] hover:shadow-sm transition-colors duration-300 ease-out disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+          className="h-6 w-6 rounded-full bg-[#CBD5E1] hover:bg-[#FFEDD5] hover:shadow-sm transition-colors duration-300 ease-out disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
           onClick={() => onDotClick(activeSlideIndex + 1)}
           disabled={activeSlideIndex === numSlides - 1}
           aria-label="Go to next slide"
         >
-          <ChevronDown className="h-2.5 w-2.5 text-gray-700" />
+          <ChevronDown className="h-3.5 w-3.5 text-gray-700" />
         </button>
       </div>
     </div>

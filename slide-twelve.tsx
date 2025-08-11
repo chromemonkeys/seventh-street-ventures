@@ -19,7 +19,9 @@ export default function SlideTwelveGetStarted() {
           
           <div className="space-y-4 sm:space-y-6">
           <p className="text-xl font-medium text-gray-800 sm:text-2xl lg:text-3xl leading-relaxed max-w-4xl">
-              Ready to contribute to something that actually matters. Plus, working on defense tech that operates in contested environments sounds way cooler than optimizing click-through rates.
+              Ready to contribute to something that actually matters. 
+              <br /><br />
+              Plus+ working on defense tech that operates in contested environments sounds way cooler than optimizing click-through rates.
             </p>
             
             <h2 className="text-xl font-semibold text-gray-800 sm:text-2xl lg:text-4xl leading-tight">

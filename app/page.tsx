@@ -7,6 +7,7 @@ import SlideEight from "../slide-eight"
 import SlideNine from "../slide-nine"
 import SlideTen from "../slide-ten"
 import SlideExample from "../slide-example"
+import SlideLearnings from "../slide-learnings"
 import SlideEleven from "../slide-eleven"
 import SlideTwelve from "../slide-twelve"
 import VerticalNavigation from "@/components/vertical-navigation"
@@ -24,8 +25,9 @@ export default function Page() {
     { id: "slide-4", Component: SlideNine },
     { id: "slide-5", Component: SlideTen },
     { id: "slide-6", Component: SlideExample },
-    { id: "slide-7", Component: SlideEleven },
-    { id: "slide-8", Component: SlideTwelve },
+    { id: "slide-7", Component: SlideLearnings },
+    { id: "slide-8", Component: SlideEleven },
+    { id: "slide-9", Component: SlideTwelve },
   ]
 
   useEffect(() => {

@@ -9,13 +9,13 @@ export default function SlideNine() {
     {
       title: "Deep tech research",
       description:
-        "Investigate latest technology challenges across domains. What are the latest threats and challenges faced? • What's currently being used in military and civilian environments. • Who are the Australian, US and Worldwide players? • What are their strengths and weaknesses?",
+        "What are the latest threats and challenges? • What's currently being used in military and civilian environments? • Who are the Australian, US and Worldwide players? • What are their strengths and weaknesses?",
       icon: Target,
     },
     {
       title: "Data strategy and collection",
       description:
-        "Collecting data to train models is crucial and takes time. With a strong archive, methodologies can be calibrated, adjusted, and reinvented faster to validate models. More data is generally better here.",
+        "Collecting data to train models is crucial and takes time. With a strong archive, methodologies can be calibrated, reinvented and validated faster.",
       icon: FileText,
     },
     {
@@ -39,7 +39,7 @@ export default function SlideNine() {
     {
       title: "Policies and compliance",
       description:
-        "It's boring as hell, but crucial for clients - certifications and compliance will matter.",
+        "Boring but crucial as certifications and compliance are usually showstoppers for clients.",
       icon: ReceiptText,
     },
   ]

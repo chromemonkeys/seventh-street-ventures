@@ -10,15 +10,15 @@ export default function SlideEight() {
       <div className="relative z-10 w-full max-w-4xl mx-auto space-y-4 sm:space-y-6 lg:space-y-8">
         <div className="space-y-4 sm:space-y-8 text-left">
           <h1 className="text-2xl font-extrabold tracking-tight sm:text-3xl lg:text-6xl text-gray-900">How I Can Actually Help</h1>
-          <h2 className="text-xl font-semibold text-gray-800 sm:text-2xl lg:text-4xl">Data Science & ML Experience</h2>
+          <h2 className="text-xl font-semibold text-gray-800 sm:text-2xl lg:text-4xl">Data Science & AI/ML Experience</h2>
           <div className="space-y-2 sm:space-y-4">
             <div className="flex items-start space-x-2 sm:space-x-3">
               <ArrowRight className="mt-0.5 h-4 w-4 flex-shrink-0 text-gray-600 sm:mt-1 sm:h-5 sm:w-5" />
-              <p className="text-sm text-gray-700 sm:text-base">Python ML and analytics with a generalist approach that lets me integrate across different systems</p>
+              <p className="text-sm text-gray-700 sm:text-base">Python AI/ML and analytics with a generalist approach that lets me integrate across different systems</p>
             </div>
             <div className="flex items-start space-x-2 sm:space-x-3">
               <ArrowRight className="mt-0.5 h-4 w-4 flex-shrink-0 text-gray-600 sm:mt-1 sm:h-5 sm:w-5" />
-              <p className="text-sm text-gray-700 sm:text-base">Strong data fundamentals - know how to build quality datasets and avoid the pitfalls that kill ML projects</p>
+              <p className="text-sm text-gray-700 sm:text-base">Strong data fundamentals - know how to build quality datasets and avoid the pitfalls that kill AI/ML projects</p>
             </div>
             <div className="flex items-start space-x-2 sm:space-x-3">
               <ArrowRight className="mt-0.5 h-4 w-4 flex-shrink-0 text-gray-600 sm:mt-1 sm:h-5 sm:w-5" />
@@ -26,7 +26,7 @@ export default function SlideEight() {
             </div>
             <div className="flex items-start space-x-2 sm:space-x-3 font-bold text-gray-800">
               <ArrowRight className="mt-0.5 h-4 w-4 flex-shrink-0 text-gray-600 sm:mt-1 sm:h-5 sm:w-5" />
-              <p className="text-sm sm:text-base">Practical ML implementation - focused on what actually works rather than what's theoretically perfect</p>
+              <p className="text-sm sm:text-base">Practical AI/ML implementation - focused on what actually works rather than what's theoretically perfect</p>
             </div>
           </div>
 
