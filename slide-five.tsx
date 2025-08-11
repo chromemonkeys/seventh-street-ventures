@@ -19,7 +19,7 @@ export default function SlideFive({ onJumpToSection }: SlideFiveProps) {
 
       <div className="relative z-10 w-full max-w-6xl space-y-8 sm:space-y-12 lg:space-y-16 text-left">
         {/* Main heading */}
-        <h1 className="text-2xl font-extrabold tracking-tight sm:text-3xl lg:text-6xl text-gray-900">Hi I'm Chris,</h1>
+        <h1 className="text-2xl font-extrabold tracking-tight sm:text-3xl lg:text-6xl text-gray-900">Hi, I'm Chris</h1>
         
         {/* Subheading */}
         <h2 className="text-xl font-semibold text-gray-800 sm:text-2xl lg:text-4xl leading-tight">

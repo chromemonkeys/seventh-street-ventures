@@ -26,7 +26,7 @@ export default function SlideLearnings() {
             <div className="flex items-start space-x-2 sm:space-x-3">
               <ArrowRight className="mt-0.5 h-4 w-4 flex-shrink-0 text-gray-600 sm:mt-1 sm:h-5 sm:w-5" />
               <p className="text-sm text-gray-700 sm:text-base">
-                Even with synced clocks aligning events is difficult, this basic system just detects volumes above a threshold but a more sophisticated one would want to use a shazam style algorithm to identify spectoral peaks and align the audio fingerprints from each device
+                Even with synced clocks, aligning events is difficult. This basic system just detects volumes above a threshold but a more sophisticated one would want to use a shazam-style algorithm to identify spectral peaks and align the audio fingerprints from each device
               </p>
             </div>
             <div className="flex items-start space-x-2 sm:space-x-3">
