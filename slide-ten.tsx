@@ -23,7 +23,7 @@ export default function SlideProduction() {
     {
       title: "Infrastructure & DevOps",
       description:
-        "Serverless by default. AWS Lambda, Cloudflare Workers, Vercel, Infrastructure as Code. CI/CD pipelines with automated testing. Monitoring, alerting, and logging so nothing breaks quietly. Build it right the first time.",
+        "Serverless by default. AWS Lambda, CloudFront, Vercel, Infrastructure as Code. CI/CD pipelines with automated testing. Monitoring, alerting, and logging so nothing breaks quietly. Build it right the first time.",
       icon: Shield,
       showMobileDescription: false,
     },
