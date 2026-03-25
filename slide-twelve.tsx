@@ -21,7 +21,7 @@ export default function SlideContact() {
             <div className="flex items-start space-x-2 sm:space-x-3">
               <ArrowRight className="mt-0.5 h-4 w-4 flex-shrink-0 text-gray-600 sm:mt-1 sm:h-5 sm:w-5" />
               <p className="text-sm text-gray-700 sm:text-base">
-                This presentation is a Next.js app built with Claude Code. You're looking at the proof.
+                This presentation is itself an example. A Next.js app built with Claude Code.
               </p>
             </div>
             <div className="flex items-start space-x-2 sm:space-x-3">

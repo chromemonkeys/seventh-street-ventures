@@ -14,7 +14,7 @@ export default function SlideWhyThisRole() {
             <div className="flex items-start space-x-2 sm:space-x-3">
               <ArrowRight className="mt-0.5 h-4 w-4 flex-shrink-0 text-gray-600 sm:mt-1 sm:h-5 sm:w-5" />
               <p className="text-sm text-gray-700 sm:text-base">
-                Most job descriptions ask you to be less than what you are. This one describes exactly what I've been doing on my own. Building across multiple businesses, owning everything end-to-end, using AI agents to move at a pace that shouldn't be possible for one person. You're not asking me to change how I work. You're asking me to do it for you.
+                Most roles are scoped narrower than how I naturally work. This one describes exactly what I've been doing on my own. Building across multiple businesses, owning everything end-to-end, using AI agents to move at a pace that shouldn't be possible for one person. This role is a natural fit for how I already operate.
               </p>
             </div>
             <div className="flex items-start space-x-2 sm:space-x-3">
@@ -26,13 +26,13 @@ export default function SlideWhyThisRole() {
             <div className="flex items-start space-x-2 sm:space-x-3">
               <ArrowRight className="mt-0.5 h-4 w-4 flex-shrink-0 text-gray-600 sm:mt-1 sm:h-5 sm:w-5" />
               <p className="text-sm text-gray-700 sm:text-base">
-                My tech decisions have shaped business outcomes. SOC2 unlocked enterprise sales, serverless cut infrastructure costs, AI features became core product differentiators. That's what you want from a CTO.
+                My tech decisions have shaped business outcomes. SOC2 unlocked enterprise sales, serverless cut infrastructure costs, AI features became core product differentiators. That's the kind of impact I want to have as a CTO.
               </p>
             </div>
             <div className="flex items-start space-x-2 sm:space-x-3 font-bold text-gray-800">
               <ArrowRight className="mt-0.5 h-4 w-4 flex-shrink-0 text-gray-600 sm:mt-1 sm:h-5 sm:w-5" />
               <p className="text-sm sm:text-base">
-                I've spent the last two years building like this because I wanted to, not because someone was paying me to. Now someone is. That's why I'm here.
+                I've been building like this because I genuinely enjoy it. This role lets me do it at a scale that matters.
               </p>
             </div>
           </div>

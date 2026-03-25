@@ -21,29 +21,29 @@ export default function SlideProjects() {
       url: null,
     },
     {
+      title: "basecore.co.uk",
+      description: "A client-facing company website designed to stick in the mind of clients.",
+      icon: Globe,
+      highlight: "Brand-forward website",
+      url: "https://basecore.co.uk",
+    },
+    {
       title: "Chronicle",
-      description: "Cloud-based real-time document collaboration editor. I wanted to see how hard it would be to disrupt a core Atlassian product.",
+      description: "Cloud-based real-time document collaboration editor. I wanted to explore building real-time collaboration from scratch.",
       icon: FileText,
       highlight: "Real-time collaboration engine",
       url: "https://github.com/chromemonkeys/chronicle",
     },
     {
       title: "dreamcat.me",
-      description: "AI-powered dream journal and interpretation app.",
+      description: "AI-powered dream journal. Because not everything needs to be serious.",
       icon: Sparkles,
       highlight: "AI consumer app",
       url: "https://dreamcat.me",
     },
     {
-      title: "basecore.io",
-      description: "A web platform designed to actually stay in the mind of visitors.",
-      icon: Globe,
-      highlight: "Web platform",
-      url: "https://basecore.io",
-    },
-    {
       title: "streetle.click",
-      description: "A geoguessing game. Because not everything has to be serious.",
+      description: "A geoguessing game. I like traveling to off the beaten track places.",
       icon: MapPin,
       highlight: "Browser game",
       url: "https://streetle.click",
@@ -69,7 +69,7 @@ export default function SlideProjects() {
           <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight">
             What I've Shipped Solo
           </h1>
-          <p className="text-sm md:text-base lg:text-lg text-gray-600 mt-2">No team. No contractors. No agencies. Design, branding, content, code, deployment. All me.</p>
+          <p className="text-sm md:text-base lg:text-lg text-gray-600 mt-2">I handled the design, branding, content, code, and deployment myself for each of these.</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 w-full max-w-5xl">

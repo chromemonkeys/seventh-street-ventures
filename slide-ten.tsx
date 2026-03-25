@@ -15,13 +15,13 @@ export default function SlideProduction() {
     {
       title: "GlowPay, fintech from scratch",
       description:
-        "Co-founded a fintech startup. Serverless backend, Android app, four platform surfaces. I scoped, designed, tested, and deployed everything. Managed external devs for the build. Today I'd just do it myself.",
+        "Co-founded a fintech startup. Serverless backend, Android app, four platform surfaces. I scoped, designed, tested, and deployed everything. Managed external devs for the build. With today's AI tooling, I could handle the full build solo.",
       icon: Server,
     },
     {
       title: "SOC2 Type 1 in 8 weeks for $1,000",
       description:
-        "Full SOC2 certification at GlowPay. Used Scrut to audit workflows and create all policies internally. No external consulting agencies. Most startups spend $50-100k on this.",
+        "Full SOC2 certification at GlowPay. Used Scrut to audit workflows and create all policies internally. No external consulting agencies. A fraction of the typical cost.",
       icon: Shield,
     },
     {
