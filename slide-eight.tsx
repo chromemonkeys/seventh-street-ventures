@@ -25,7 +25,7 @@ export default function SilosAreDead() {
             </div>
             <div className="flex items-start space-x-2 sm:space-x-3 font-bold text-gray-800">
               <ArrowRight className="mt-0.5 h-4 w-4 flex-shrink-0 text-gray-600 sm:mt-1 sm:h-5 sm:w-5" />
-              <p className="text-sm sm:text-base">I've been proving this for the last 12 months. Six products, six different domains, one person.</p>
+              <p className="text-sm sm:text-base">I've been doing this my entire career. AI agents just let me do it faster.</p>
             </div>
           </div>
         </div>
