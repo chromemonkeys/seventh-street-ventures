@@ -67,9 +67,9 @@ export default function SlideProjects() {
           className="text-center mb-2 md:mb-6"
         >
           <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight">
-            What I've Shipped Solo
+            What I've Shipped Solo Recently
           </h1>
-          <p className="text-sm md:text-base lg:text-lg text-gray-600 mt-2">No team. No contractors. No agencies. Design, branding, content, code, deployment. All me.</p>
+          <p className="text-sm md:text-base lg:text-lg text-gray-600 mt-2">No team. No contractors. No agencies. Design, branding, content, code, deployment.</p>
         </motion.div>
 
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-1.5 md:gap-4 w-full max-w-5xl">
