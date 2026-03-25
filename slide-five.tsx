@@ -16,7 +16,7 @@ export default function SlideIntro() {
         <h1 className="text-2xl font-extrabold tracking-tight sm:text-3xl lg:text-6xl text-gray-900">Hi, I'm Chris</h1>
 
         <h2 className="text-xl font-semibold text-gray-800 sm:text-2xl lg:text-4xl leading-tight">
-          You said don't send a CV. So I built this instead.
+          You said don't send a generic CV. So I built this instead.
         </h2>
 
         <div className="pt-2 sm:pt-6 lg:pt-8 space-y-2 sm:space-y-6">

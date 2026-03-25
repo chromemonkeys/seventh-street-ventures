@@ -21,7 +21,7 @@ export default function SlideProduction() {
     {
       title: "SOC2 Type 1 in 8 weeks for $1,000",
       description:
-        "Full SOC2 certification at GlowPay. Used Scrut to audit workflows and create all policies internally. No external consulting agencies. Most startups spend $50-100k on this.",
+        "Full SOC2 certification at GlowPay. Used Scrut to audit workflows and create all policies internally. No external consulting agencies. I met many startups along the way choosing to spend $20-30k paying external advisors for this before they even had customers.",
       icon: Shield,
     },
     {

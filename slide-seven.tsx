@@ -21,6 +21,13 @@ export default function SlideProjects() {
       url: null,
     },
     {
+      title: "basecore.co.uk",
+      description: "A client-facing company website designed to stick in the mind of clients.",
+      icon: Globe,
+      highlight: "Brand-forward website",
+      url: "https://basecore.co.uk",
+    },
+    {
       title: "Chronicle",
       description: "Cloud-based real-time document collaboration editor. I wanted to see how hard it would be to disrupt a core Atlassian product.",
       icon: FileText,
@@ -29,21 +36,14 @@ export default function SlideProjects() {
     },
     {
       title: "dreamcat.me",
-      description: "AI-powered dream journal and interpretation app.",
+      description: "AI-powered dream journal. Because not everything needs to be serious.",
       icon: Sparkles,
       highlight: "AI consumer app",
       url: "https://dreamcat.me",
     },
     {
-      title: "basecore.io",
-      description: "A web platform designed to actually stay in the mind of visitors.",
-      icon: Globe,
-      highlight: "Web platform",
-      url: "https://basecore.io",
-    },
-    {
       title: "streetle.click",
-      description: "A geoguessing game. Because not everything has to be serious.",
+      description: "A geoguessing game. I like traveling to off the beaten track places.",
       icon: MapPin,
       highlight: "Browser game",
       url: "https://streetle.click",
