@@ -33,7 +33,7 @@ export default function SlideProduction() {
   ]
 
   return (
-    <Slide className="relative bg-[#FDFBF8] p-4 md:p-8 lg:p-12 overflow-hidden flex flex-col justify-center items-center">
+    <Slide className="relative bg-[#FDFBF8]/80 p-4 md:p-8 lg:p-12 overflow-hidden flex flex-col justify-center items-center">
       <div
         className="absolute inset-0 z-0"
         style={{

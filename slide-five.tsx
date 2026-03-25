@@ -4,7 +4,7 @@ import Slide from "@/components/slide"
 
 export default function SlideIntro() {
   return (
-    <Slide className="relative bg-[#FDFBF8] p-4 md:p-8 lg:p-12">
+    <Slide className="relative bg-[#FDFBF8]/80 p-4 md:p-8 lg:p-12">
       <div
         className="absolute inset-0 z-0"
         style={{

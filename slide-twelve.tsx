@@ -1,11 +1,11 @@
 "use client"
 
 import Slide from "@/components/slide"
-import { ArrowRight, ExternalLink } from "lucide-react"
+import { ArrowRight, ExternalLink, Linkedin } from "lucide-react"
 
 export default function SlideContact() {
   return (
-    <Slide className="relative bg-[#FDFBF8] p-4 md:p-8 lg:p-12 overflow-hidden flex flex-col justify-center items-center">
+    <Slide className="relative bg-[#FDFBF8]/80 p-4 md:p-8 lg:p-12 overflow-hidden flex flex-col justify-center items-center">
       <div
         className="absolute inset-0 z-0"
         style={{
@@ -50,6 +50,9 @@ export default function SlideContact() {
                 </a>
                 <a href="https://github.com/chromemonkeys" target="_blank" rel="noopener noreferrer" className="text-sm sm:text-base text-[#6B46C1] hover:text-[#553C9A] transition-colors flex items-center gap-1">
                   github.com/chromemonkeys <ExternalLink className="w-3 h-3" />
+                </a>
+                <a href="https://www.linkedin.com/in/christopher-milner-50463229/" target="_blank" rel="noopener noreferrer" className="text-sm sm:text-base text-[#6B46C1] hover:text-[#553C9A] transition-colors flex items-center gap-1">
+                  LinkedIn <Linkedin className="w-3 h-3" />
                 </a>
               </div>
             </div>

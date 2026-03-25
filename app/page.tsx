@@ -1,6 +1,6 @@
 "use client"
 
-import { useRef, useEffect, useState, useCallback } from "react"
+import { useRef, useEffect, useState, useCallback, lazy, Suspense } from "react"
 import SlideIntro from "../slide-five"
 import SlideProjects from "../slide-seven"
 import SlideSilos from "../slide-eight"
@@ -9,7 +9,9 @@ import SlideProduction from "../slide-ten"
 import SlideWhyThisRole from "../slide-eleven"
 import SlideContact from "../slide-twelve"
 import VerticalNavigation from "@/components/vertical-navigation"
+import AmbientMusic from "@/components/ambient-music"
 import { AppSettingsProvider } from "@/context/app-settings-context"
+const CrowBackground = lazy(() => import("@/components/crow-background"))
 
 export default function Page() {
   const slideRefs = useRef<(HTMLDivElement | null)[]>([])
@@ -111,6 +113,36 @@ export default function Page() {
 
   return (
     <AppSettingsProvider>
+      <Suspense fallback={null}>
+        <CrowBackground />
+      </Suspense>
+
+      {/* Tree silhouette on left */}
+      <div
+        className="fixed left-0 bottom-0 -z-5 pointer-events-none hidden lg:block"
+        style={{ width: "30vw", height: "100vh" }}
+      >
+        <img
+          src="/tree.svg"
+          alt=""
+          className="absolute left-0 h-full w-auto object-contain object-left-bottom opacity-60"
+          style={{ filter: "brightness(0.3)", bottom: "-35vh" }}
+        />
+      </div>
+
+      {/* Tree silhouette on right (mirrored) */}
+      <div
+        className="fixed right-0 bottom-0 -z-5 pointer-events-none hidden lg:block"
+        style={{ width: "30vw", height: "100vh" }}
+      >
+        <img
+          src="/tree.svg"
+          alt=""
+          className="absolute right-0 h-full w-auto object-contain object-right-bottom opacity-60"
+          style={{ filter: "brightness(0.3)", bottom: "-35vh", transform: "scaleX(-1)" }}
+        />
+      </div>
+
       <div className="h-screen overflow-y-scroll snap-y snap-mandatory pb-20">
         {slides.map((slide, index) => (
           <div key={slide.id} id={slide.id} ref={(el) => (slideRefs.current[index] = el)} className="snap-start">
@@ -126,6 +158,7 @@ export default function Page() {
           className="hidden md:block"
         />
       </div>
+      <AmbientMusic />
     </AppSettingsProvider>
   )
 }

@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react"
 
 export default function SlideWhyThisRole() {
   return (
-    <Slide className="relative bg-[#FDFBF8] p-4 md:p-8 lg:p-12">
+    <Slide className="relative bg-[#FDFBF8]/80 p-4 md:p-8 lg:p-12">
       <div className="relative z-10 w-full max-w-4xl mx-auto space-y-4 sm:space-y-6 lg:space-y-8">
         <div className="space-y-4 sm:space-y-8 text-left">
           <h1 className="text-2xl font-extrabold tracking-tight sm:text-3xl lg:text-6xl text-gray-900">Why This Role</h1>
