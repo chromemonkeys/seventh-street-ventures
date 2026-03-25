@@ -1,15 +1,13 @@
 "use client"
 
 import { useRef, useEffect, useState, useCallback } from "react"
-import SlideFive from "../slide-five"
-import SlideSeven from "../slide-seven"
-import SlideEight from "../slide-eight"
-import SlideNine from "../slide-nine"
-import SlideTen from "../slide-ten"
-import SlideExample from "../slide-example"
-import SlideLearnings from "../slide-learnings"
-import SlideEleven from "../slide-eleven"
-import SlideTwelve from "../slide-twelve"
+import SlideIntro from "../slide-five"
+import SlideProjects from "../slide-seven"
+import SlideSilos from "../slide-eight"
+import SlideHowIWork from "../slide-nine"
+import SlideProduction from "../slide-ten"
+import SlideWhyThisRole from "../slide-eleven"
+import SlideContact from "../slide-twelve"
 import VerticalNavigation from "@/components/vertical-navigation"
 import { AppSettingsProvider } from "@/context/app-settings-context"
 
@@ -19,15 +17,13 @@ export default function Page() {
   const [isFullScreen, setIsFullScreen] = useState(false)
 
   const slides = [
-    { id: "slide-1", Component: SlideFive },
-    { id: "slide-2", Component: SlideSeven },
-    { id: "slide-3", Component: SlideEight },
-    { id: "slide-4", Component: SlideNine },
-    { id: "slide-5", Component: SlideTen },
-    { id: "slide-6", Component: SlideExample },
-    { id: "slide-7", Component: SlideLearnings },
-    { id: "slide-8", Component: SlideEleven },
-    { id: "slide-9", Component: SlideTwelve },
+    { id: "intro", Component: SlideIntro },
+    { id: "projects", Component: SlideProjects },
+    { id: "silos", Component: SlideSilos },
+    { id: "how-i-work", Component: SlideHowIWork },
+    { id: "production", Component: SlideProduction },
+    { id: "why-this-role", Component: SlideWhyThisRole },
+    { id: "contact", Component: SlideContact },
   ]
 
   useEffect(() => {
@@ -118,7 +114,7 @@ export default function Page() {
       <div className="h-screen overflow-y-scroll snap-y snap-mandatory pb-20">
         {slides.map((slide, index) => (
           <div key={slide.id} id={slide.id} ref={(el) => (slideRefs.current[index] = el)} className="snap-start">
-            {slide.id === "slide-5" ? <slide.Component onJumpToSection={scrollToSlide} /> : <slide.Component />}
+            <slide.Component />
           </div>
         ))}
         <VerticalNavigation

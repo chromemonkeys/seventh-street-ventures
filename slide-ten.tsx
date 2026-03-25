@@ -2,43 +2,42 @@
 
 import Slide from "@/components/slide"
 import { motion } from "framer-motion"
-import { FileText, DollarSign, Target, Bot, ReceiptText, TrendingUp, Users, Globe, Zap } from "lucide-react"
+import { Shield, Server, Radio, CheckCircle } from "lucide-react"
 
-export default function SlideTenOnboarding() {
-  const onboardingSteps = [
+export default function SlideProduction() {
+  const items = [
     {
-      title: "Strategic positioning",
+      title: "Mulga Defense, drone detection",
       description:
-        "How to compete against bigger, better-funded players and what moats you can actually build",
-      icon: Target,
+        "Employee #1 at a defense startup. Built an acoustic drone detection system using AI coding agents and hardware. TDOA algorithms for direction of arrival and deep learning for acoustic signature classification. Real product, real stakes.",
+      icon: Radio,
     },
     {
-      title: "Market expansion",
+      title: "GlowPay, fintech from scratch",
       description:
-        "Different applications for the tech, which countries/organizations need it most, and how to build inroads",
-      icon: Globe,
+        "Co-founded a fintech startup. Serverless backend, Android app, four platform surfaces. I scoped, designed, tested, and deployed everything. Managed external devs for the build. Today I'd just do it myself.",
+      icon: Server,
     },
     {
-      title: "Smart partnerships",
+      title: "SOC2 Type 1 in 8 weeks for $1,000",
       description:
-        "Universities, adjacent tech, non-defense applications that could accelerate development",
-      icon: Users,
+        "Full SOC2 certification at GlowPay. Used Scrut to audit workflows and create all policies internally. No external consulting agencies. Most startups spend $50-100k on this.",
+      icon: Shield,
     },
     {
-      title: "Scaling challenges",
+      title: "Serverless-first, always",
       description:
-        "Balancing custom solutions vs standardized products, and navigating hardware supply chain risks",
-      icon: Zap,
+        "I build on serverless by default. Build it right the first time and you won't have to rebuild it later. Open banking activation, regulatory compliance, security audits. The boring stuff that actually matters.",
+      icon: CheckCircle,
     },
   ]
 
   return (
     <Slide className="relative bg-[#FDFBF8] p-4 md:p-8 lg:p-12 overflow-hidden flex flex-col justify-center items-center">
-      {/* Subtle background gradient similar to Slide 5, but more transparent */}
       <div
         className="absolute inset-0 z-0"
         style={{
-          background: "linear-gradient(to left, rgba(243, 205, 162, 0.2), rgba(216, 207, 240, 0.2))", // Peach to Soft Lavender with 20% opacity
+          background: "linear-gradient(to left, rgba(243, 205, 162, 0.2), rgba(216, 207, 240, 0.2))",
         }}
       />
 
@@ -49,11 +48,11 @@ export default function SlideTenOnboarding() {
           transition={{ duration: 0.6 }}
           className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 md:mb-8 text-center tracking-tight"
         >
-          Bigger picture ideas
+          Production Context
         </motion.h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-4 md:gap-x-6 md:gap-y-8 w-full max-w-5xl">
-          {onboardingSteps.map((step, index) => {
-            const IconComponent = step.icon
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-4 md:gap-x-6 md:gap-y-6 w-full max-w-5xl">
+          {items.map((item, index) => {
+            const IconComponent = item.icon
             return (
               <motion.div
                 key={index}
@@ -66,8 +65,8 @@ export default function SlideTenOnboarding() {
                   <IconComponent className="w-3 h-3 md:w-4 md:h-4 text-[#6B46C1]" />
                 </div>
                 <div>
-                  <h3 className="text-sm md:text-lg font-semibold text-gray-800 leading-tight mb-1">{step.title}</h3>
-                  <p className="text-gray-700 text-xs md:text-sm">{step.description}</p>
+                  <h3 className="text-sm md:text-lg font-semibold text-gray-800 leading-tight mb-1">{item.title}</h3>
+                  <p className="text-gray-700 text-xs md:text-sm">{item.description}</p>
                 </div>
               </motion.div>
             )

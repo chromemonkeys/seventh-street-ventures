@@ -1,89 +1,33 @@
 "use client"
 
 import Slide from "@/components/slide"
-import { motion } from "framer-motion"
-import { Target, FileText, Bot, TrendingUp, ReceiptText, Users } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 
-export default function SlideNine() {
-  const onboardingSteps = [
-    {
-      title: "Deep tech research",
-      description:
-        "What are the latest threats and challenges? • What's currently being used in military and civilian environments? • Who are the Australian, US and Worldwide players? • What are their strengths and weaknesses?",
-      icon: Target,
-    },
-    {
-      title: "Data strategy and collection",
-      description:
-        "Collecting data to train models is crucial and takes time. With a strong archive, methodologies can be calibrated, reinvented and validated faster.",
-      icon: FileText,
-    },
-    {
-      title: "Field research and deployment",
-      description:
-        "Find areas to set up sensors. Deploy different sensors and calibrate them to ensure accurate data collection. (We could even start testing in my yard with ~1km view and low background noise.)",
-      icon: TrendingUp,
-    },
-    {
-      title: "Building proof of concepts",
-      description:
-        "Start building now - getting hands dirty early surfaces all the complexities of the problem.",
-      icon: Bot,
-    },
-    {
-      title: "Network research",
-      description:
-        "Identify the right people to reach out to - the same way I found Mulga.",
-      icon: Users,
-    },
-    {
-      title: "Policies and compliance",
-      description:
-        "Boring but crucial as certifications and compliance are usually showstoppers for clients.",
-      icon: ReceiptText,
-    },
-  ]
-
+export default function SlideHowIWork() {
   return (
-    <Slide className="relative bg-[#FDFBF8] p-4 md:p-8 lg:p-12 overflow-hidden flex flex-col justify-center items-center">
-      {/* Subtle background gradient similar to Slide 5, but more transparent */}
-      <div
-        className="absolute inset-0 z-0"
-        style={{
-          background: "linear-gradient(to left, rgba(243, 205, 162, 0.2), rgba(216, 207, 240, 0.2))",
-        }}
-      />
-
-      <div className="relative z-10 flex flex-col items-center justify-center h-full w-full max-w-6xl mx-auto py-4 md:py-8">
-        <motion.h1
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 md:mb-8 text-center tracking-tight"
-        >
-          Immediate stuff I could dive into
-        </motion.h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-4 md:gap-x-6 md:gap-y-8 w-full max-w-5xl">
-          {onboardingSteps.map((step, index) => {
-            const IconComponent = step.icon
-            return (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="flex items-start p-3 md:p-4 bg-white/50 backdrop-blur-xs rounded-xl shadow-sm border border-gray-100/50 hover:shadow-md transition-shadow duration-300"
-              >
-                <div className="flex-shrink-0 w-6 h-6 md:w-7 md:h-7 rounded-full bg-[#D8CFF0] flex items-center justify-center mr-2 md:mr-3 mt-0.5">
-                  <IconComponent className="w-3 h-3 md:w-4 md:h-4 text-[#6B46C1]" />
-                </div>
-                <div>
-                  <h3 className="text-sm md:text-lg font-semibold text-gray-800 leading-tight mb-1">{step.title}</h3>
-                  <p className="text-gray-700 text-xs md:text-sm">{step.description}</p>
-                </div>
-              </motion.div>
-            )
-          })}
+    <Slide className="relative bg-[#FDFBF8] p-4 md:p-8 lg:p-12">
+      <div className="relative z-10 w-full max-w-4xl mx-auto space-y-4 sm:space-y-6 lg:space-y-8">
+        <div className="space-y-4 sm:space-y-8 text-left">
+          <h1 className="text-2xl font-extrabold tracking-tight sm:text-3xl lg:text-6xl text-gray-900">How I Work</h1>
+          <h2 className="text-xl font-semibold text-gray-800 sm:text-2xl lg:text-4xl">I treat AI agents like employees, not magic.</h2>
+          <div className="space-y-2 sm:space-y-4">
+            <div className="flex items-start space-x-2 sm:space-x-3">
+              <ArrowRight className="mt-0.5 h-4 w-4 flex-shrink-0 text-gray-600 sm:mt-1 sm:h-5 sm:w-5" />
+              <p className="text-sm text-gray-700 sm:text-base">You still need to scope, plan, design, and think things through. Build detailed scaffolding and rails. Set up proper testing. The AI handles the volume. I handle the architecture and the decisions.</p>
+            </div>
+            <div className="flex items-start space-x-2 sm:space-x-3">
+              <ArrowRight className="mt-0.5 h-4 w-4 flex-shrink-0 text-gray-600 sm:mt-1 sm:h-5 sm:w-5" />
+              <p className="text-sm text-gray-700 sm:text-base">Multiple agents, structured workflows. Breakneck speed coding without discipline creates tech debt that costs you more time than it saves. I've learned where the line is.</p>
+            </div>
+            <div className="flex items-start space-x-2 sm:space-x-3">
+              <ArrowRight className="mt-0.5 h-4 w-4 flex-shrink-0 text-gray-600 sm:mt-1 sm:h-5 sm:w-5" />
+              <p className="text-sm text-gray-700 sm:text-base">The before and after: at GlowPay I managed a team of external developers to build an Android app and serverless backend. Ditch Digital Detox is the same kind of output. Full Android app, live on the Play Store. I built it solo in 7 days.</p>
+            </div>
+            <div className="flex items-start space-x-2 sm:space-x-3 font-bold text-gray-800">
+              <ArrowRight className="mt-0.5 h-4 w-4 flex-shrink-0 text-gray-600 sm:mt-1 sm:h-5 sm:w-5" />
+              <p className="text-sm sm:text-base">The skill isn't prompting. It's knowing what to build, how to architect it, and when to slow down.</p>
+            </div>
+          </div>
         </div>
       </div>
     </Slide>
