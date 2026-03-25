@@ -32,7 +32,7 @@ export default function SlideWhyThisRole() {
             <div className="flex items-start space-x-2 sm:space-x-3 font-bold text-gray-800">
               <ArrowRight className="mt-0.5 h-4 w-4 flex-shrink-0 text-gray-600 sm:mt-1 sm:h-5 sm:w-5" />
               <p className="text-sm sm:text-base">
-                I've spent the last two years building like this because I wanted to, not because someone was paying me to. Now someone is. That's why I'm here.
+                I've been building like this because I couldn't stop. The fact that someone's hiring for it is just a bonus.
               </p>
             </div>
           </div>
