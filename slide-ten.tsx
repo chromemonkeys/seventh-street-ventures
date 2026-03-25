@@ -2,33 +2,37 @@
 
 import Slide from "@/components/slide"
 import { motion } from "framer-motion"
-import { Shield, Server, Radio, CheckCircle } from "lucide-react"
+import { Shield, Server, Radio, Database } from "lucide-react"
 
 export default function SlideProduction() {
   const items = [
     {
-      title: "Mulga Defense, drone detection",
+      title: "Mulga Defense, acoustic drone detection",
       description:
         "Employee #1 at a defense startup. Built an acoustic drone detection system using AI coding agents and hardware. TDOA algorithms for direction of arrival and deep learning for acoustic signature classification. Real product, real stakes.",
       icon: Radio,
+      showMobileDescription: true,
     },
     {
       title: "GlowPay, fintech from scratch",
       description:
-        "Co-founded a fintech startup. Serverless backend, Android app, four platform surfaces. I scoped, designed, tested, and deployed everything. Managed external devs for the build. Today I'd just do it myself.",
+        "Co-founded a fintech. Python and TypeScript across the stack. AWS Lambda, API Gateway, DynamoDB. Four platform surfaces. SOC2 Type 1 in 8 weeks for $1,000 with no external consultants. Open banking activation.",
       icon: Server,
+      showMobileDescription: false,
     },
     {
-      title: "SOC2 Type 1 in 8 weeks for $1,000",
+      title: "Infrastructure & DevOps",
       description:
-        "Full SOC2 certification at GlowPay. Used Scrut to audit workflows and create all policies internally. No external consulting agencies. $1,000 total.",
+        "Serverless by default. AWS Lambda, Cloudflare Workers, Vercel, Infrastructure as Code. CI/CD pipelines with automated testing. Monitoring, alerting, and logging so nothing breaks quietly. Build it right the first time.",
       icon: Shield,
+      showMobileDescription: false,
     },
     {
-      title: "Serverless-first, always",
+      title: "Data & Security",
       description:
-        "I build on serverless by default. Build it right the first time and you won't have to rebuild it later. Open banking activation, regulatory compliance, security audits. The boring stuff that actually matters.",
-      icon: CheckCircle,
+        "SQL and NoSQL database architecture. Python for AI/ML and data pipelines. Secure coding practices, dependency auditing. The boring stuff that keeps production systems alive.",
+      icon: Database,
+      showMobileDescription: false,
     },
   ]
 
@@ -66,7 +70,7 @@ export default function SlideProduction() {
                 </div>
                 <div>
                   <h3 className="text-sm md:text-lg font-semibold text-gray-800 leading-tight mb-1">{item.title}</h3>
-                  <p className="text-gray-700 text-xs md:text-sm hidden md:block">{item.description}</p>
+                  <p className={`text-gray-700 text-xs md:text-sm ${item.showMobileDescription ? "" : "hidden md:block"}`}>{item.description}</p>
                 </div>
               </motion.div>
             )
