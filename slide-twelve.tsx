@@ -17,7 +17,7 @@ export default function SlideContact() {
         <div className="space-y-2 sm:space-y-6 text-left">
           <h1 className="text-2xl font-extrabold tracking-tight sm:text-3xl lg:text-6xl text-gray-900">Let's chat</h1>
 
-          <div className="space-y-3 sm:space-y-4">
+          <div className="space-y-1.5 sm:space-y-4">
             <div className="flex items-start space-x-2 sm:space-x-3">
               <ArrowRight className="mt-0.5 h-4 w-4 flex-shrink-0 text-gray-600 sm:mt-1 sm:h-5 sm:w-5" />
               <p className="text-sm text-gray-700 sm:text-base">
@@ -32,19 +32,19 @@ export default function SlideContact() {
             </div>
           </div>
 
-          <div className="pt-2 sm:pt-4">
+          <div className="pt-1 sm:pt-4">
             <h2 className="text-xl font-semibold text-gray-800 sm:text-2xl lg:text-4xl leading-tight">
               Chris Milner
             </h2>
 
-            <div className="space-y-2 sm:space-y-3 mt-3">
+            <div className="space-y-1 sm:space-y-3 mt-2 sm:mt-3">
               <p className="text-sm sm:text-base text-gray-700">
                 chris.milner@protonmail.com
               </p>
               <p className="text-sm sm:text-base text-gray-700">
                 +61 423 403 440
               </p>
-              <div className="flex flex-wrap gap-4 pt-2">
+              <div className="flex flex-wrap gap-3 sm:gap-4 pt-1 sm:pt-2">
                 <a href="https://badgerlabs.tech" target="_blank" rel="noopener noreferrer" className="text-sm sm:text-base text-[#6B46C1] hover:text-[#553C9A] transition-colors flex items-center gap-1">
                   badgerlabs.tech <ExternalLink className="w-3 h-3" />
                 </a>

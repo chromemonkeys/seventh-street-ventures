@@ -50,7 +50,7 @@ export default function SlideProduction() {
         >
           Production Context
         </motion.h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-4 md:gap-x-6 md:gap-y-6 w-full max-w-5xl">
+        <div className="grid grid-cols-2 md:grid-cols-2 gap-1.5 md:gap-6 w-full max-w-5xl">
           {items.map((item, index) => {
             const IconComponent = item.icon
             return (
@@ -59,14 +59,14 @@ export default function SlideProduction() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="flex items-start p-3 md:p-4 bg-white/50 backdrop-blur-xs rounded-xl shadow-sm border border-gray-100/50 hover:shadow-md transition-shadow duration-300"
+                className="flex items-start p-2 md:p-4 bg-white/50 backdrop-blur-xs rounded-xl shadow-sm border border-gray-100/50 hover:shadow-md transition-shadow duration-300"
               >
                 <div className="flex-shrink-0 w-6 h-6 md:w-7 md:h-7 rounded-full bg-[#D8CFF0] flex items-center justify-center mr-2 md:mr-3 mt-0.5">
                   <IconComponent className="w-3 h-3 md:w-4 md:h-4 text-[#6B46C1]" />
                 </div>
                 <div>
                   <h3 className="text-sm md:text-lg font-semibold text-gray-800 leading-tight mb-1">{item.title}</h3>
-                  <p className="text-gray-700 text-xs md:text-sm">{item.description}</p>
+                  <p className="text-gray-700 text-xs md:text-sm hidden md:block">{item.description}</p>
                 </div>
               </motion.div>
             )

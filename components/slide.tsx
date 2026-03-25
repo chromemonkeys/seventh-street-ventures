@@ -8,7 +8,7 @@ interface SlideProps {
 
 export default function Slide({ children, className, style }: SlideProps) {
   return (
-    <div className={`flex h-screen w-full items-center justify-center overflow-hidden ${className}`} style={style}>
+    <div className={`flex w-full items-center justify-center overflow-hidden ${className}`} style={{ height: "100dvh", ...style }}>
       {children}
     </div>
   )
