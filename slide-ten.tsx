@@ -18,21 +18,21 @@ export default function SlideProduction() {
       description:
         "Co-founded a fintech. Python and TypeScript across the stack. AWS Lambda, API Gateway, DynamoDB. Four platform surfaces. SOC2 Type 1 in 8 weeks for $1,000 with no external consultants. Open banking activation.",
       icon: Server,
-      showMobileDescription: false,
+      showMobileDescription: true,
     },
     {
       title: "Infrastructure & DevOps",
       description:
         "Serverless by default. AWS Lambda, CloudFront, Vercel, Infrastructure as Code. CI/CD pipelines with automated testing. Monitoring, alerting, and logging so nothing breaks quietly. Build it right the first time.",
       icon: Shield,
-      showMobileDescription: false,
+      showMobileDescription: true,
     },
     {
       title: "Data & Security",
       description:
         "SQL and NoSQL database architecture. Python for AI/ML and data pipelines. Secure coding practices, dependency auditing. The boring stuff that keeps production systems alive.",
       icon: Database,
-      showMobileDescription: false,
+      showMobileDescription: true,
     },
   ]
 
@@ -54,7 +54,7 @@ export default function SlideProduction() {
         >
           Production Context
         </motion.h1>
-        <div className="grid grid-cols-2 md:grid-cols-2 gap-1.5 md:gap-6 w-full max-w-5xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-1.5 md:gap-6 w-full max-w-5xl overflow-y-auto max-h-[70dvh] md:max-h-none md:overflow-visible">
           {items.map((item, index) => {
             const IconComponent = item.icon
             return (
