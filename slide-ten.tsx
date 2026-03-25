@@ -37,7 +37,7 @@ export default function SlideProduction() {
   ]
 
   return (
-    <Slide className="relative bg-[#FDFBF8]/80 p-4 md:p-8 lg:p-12 overflow-hidden flex flex-col justify-center items-center">
+    <Slide className="relative bg-[#FDFBF8]/80 p-2 md:p-8 lg:p-12 overflow-hidden flex flex-col justify-center items-center">
       <div
         className="absolute inset-0 z-0"
         style={{
@@ -45,16 +45,16 @@ export default function SlideProduction() {
         }}
       />
 
-      <div className="relative z-10 flex flex-col items-center justify-center h-full w-full max-w-6xl mx-auto py-2 md:py-8">
+      <div className="relative z-10 flex flex-col items-center justify-center w-full max-w-6xl mx-auto py-0 md:py-8">
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-2 md:mb-8 text-center tracking-tight"
+          className="text-xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-1 md:mb-8 text-center tracking-tight"
         >
           Production Context
         </motion.h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-1.5 md:gap-6 w-full max-w-5xl overflow-y-auto max-h-[70dvh] md:max-h-none md:overflow-visible">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-1 md:gap-6 w-full max-w-5xl">
           {items.map((item, index) => {
             const IconComponent = item.icon
             return (
