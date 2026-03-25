@@ -23,7 +23,7 @@ export default function AmbientMusic() {
     // Convolver for reverb/echo
     const convolver = ctx.createConvolver()
     const rate = ctx.sampleRate
-    const length = rate * 4 // 4 second reverb tail
+    const length = rate * 6 // 6 second reverb tail
     const impulse = ctx.createBuffer(2, length, rate)
     for (let channel = 0; channel < 2; channel++) {
       const data = impulse.getChannelData(channel)
@@ -36,8 +36,8 @@ export default function AmbientMusic() {
     // Mix dry + wet signals
     const dry = ctx.createGain()
     const wet = ctx.createGain()
-    dry.gain.value = 0.45
-    wet.gain.value = 0.55
+    dry.gain.value = 0.35
+    wet.gain.value = 0.65
 
     const master = ctx.createGain()
     master.gain.value = 0.68
