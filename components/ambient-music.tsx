@@ -40,7 +40,7 @@ export default function AmbientMusic() {
     wet.gain.value = 0.65
 
     const master = ctx.createGain()
-    master.gain.value = 0.68
+    master.gain.value = 0.4
 
     source.connect(dry).connect(master)
     source.connect(convolver).connect(wet).connect(master)
