@@ -14,7 +14,7 @@ export default function SlideWhyThisRole() {
             <div className="flex items-start space-x-2 sm:space-x-3">
               <ArrowRight className="mt-0.5 h-4 w-4 flex-shrink-0 text-gray-600 sm:mt-1 sm:h-5 sm:w-5" />
               <p className="text-sm text-gray-700 sm:text-base">
-                Most job descriptions ask you to be less than what you are. This one describes exactly what I've been doing on my own. Building across multiple businesses, owning everything end-to-end, using AI agents to move at a pace that shouldn't be possible for one person. You're not asking me to change how I work. You're asking me to do it for you.
+                This role describes exactly what I've been doing on my own. Building across multiple businesses, owning everything end-to-end, using AI agents to move at a pace that shouldn't be possible for one person. I'm not pitching you on what I could do. I'm showing you what I already do.
               </p>
             </div>
             <div className="flex items-start space-x-2 sm:space-x-3">
