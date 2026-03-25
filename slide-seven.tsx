@@ -59,12 +59,12 @@ export default function SlideProjects() {
         }}
       />
 
-      <div className="relative z-10 flex flex-col items-center justify-center h-full w-full max-w-6xl mx-auto py-4 md:py-8">
+      <div className="relative z-10 flex flex-col items-center justify-center h-full w-full max-w-6xl mx-auto py-2 md:py-8">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-4 md:mb-6"
+          className="text-center mb-2 md:mb-6"
         >
           <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight">
             What I've Shipped Solo
@@ -72,7 +72,7 @@ export default function SlideProjects() {
           <p className="text-sm md:text-base lg:text-lg text-gray-600 mt-2">No team. No contractors. No agencies. Design, branding, content, code, deployment. All me.</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 w-full max-w-5xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 w-full max-w-5xl">
           {projects.map((project, index) => {
             const IconComponent = project.icon
             return (

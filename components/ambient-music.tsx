@@ -1,35 +1,69 @@
 "use client"
 
-import { useRef, useState, useEffect, useCallback } from "react"
+import { useRef, useState, useCallback } from "react"
 import { Volume2, VolumeX } from "lucide-react"
 
 export default function AmbientMusic() {
   const audioRef = useRef<HTMLAudioElement | null>(null)
+  const ctxRef = useRef<AudioContext | null>(null)
   const [isPlaying, setIsPlaying] = useState(false)
+  const initialized = useRef(false)
 
-  useEffect(() => {
-    const audio = new Audio("/recording.wav")
+  const init = useCallback(() => {
+    if (initialized.current) return
+    initialized.current = true
+
+    const ctx = new AudioContext()
+    const audio = new Audio("/ambient.mp3")
     audio.loop = true
-    audio.volume = 0.3
-    audioRef.current = audio
+    audio.crossOrigin = "anonymous"
 
-    return () => {
-      audio.pause()
-      audio.src = ""
+    const source = ctx.createMediaElementSource(audio)
+
+    // Convolver for reverb/echo
+    const convolver = ctx.createConvolver()
+    const rate = ctx.sampleRate
+    const length = rate * 4 // 4 second reverb tail
+    const impulse = ctx.createBuffer(2, length, rate)
+    for (let channel = 0; channel < 2; channel++) {
+      const data = impulse.getChannelData(channel)
+      for (let i = 0; i < length; i++) {
+        data[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / length, 2.5)
+      }
     }
+    convolver.buffer = impulse
+
+    // Mix dry + wet signals
+    const dry = ctx.createGain()
+    const wet = ctx.createGain()
+    dry.gain.value = 0.45
+    wet.gain.value = 0.55
+
+    const master = ctx.createGain()
+    master.gain.value = 0.3
+
+    source.connect(dry).connect(master)
+    source.connect(convolver).connect(wet).connect(master)
+    master.connect(ctx.destination)
+
+    audioRef.current = audio
+    ctxRef.current = ctx
   }, [])
 
   const toggle = useCallback(() => {
+    init()
     const audio = audioRef.current
-    if (!audio) return
+    const ctx = ctxRef.current
+    if (!audio || !ctx) return
 
     if (isPlaying) {
       audio.pause()
     } else {
+      ctx.resume()
       audio.play()
     }
     setIsPlaying(!isPlaying)
-  }, [isPlaying])
+  }, [isPlaying, init])
 
   return (
     <button

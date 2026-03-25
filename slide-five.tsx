@@ -12,16 +12,16 @@ export default function SlideIntro() {
         }}
       />
 
-      <div className="relative z-10 w-full max-w-6xl space-y-8 sm:space-y-12 lg:space-y-16 text-left">
+      <div className="relative z-10 w-full max-w-6xl space-y-4 sm:space-y-8 lg:space-y-16 text-left">
         <h1 className="text-2xl font-extrabold tracking-tight sm:text-3xl lg:text-6xl text-gray-900">Hi, I'm Chris</h1>
 
         <h2 className="text-xl font-semibold text-gray-800 sm:text-2xl lg:text-4xl leading-tight">
           You said don't send a CV. So I built this instead.
         </h2>
 
-        <div className="pt-4 sm:pt-6 lg:pt-8 space-y-4 sm:space-y-6">
+        <div className="pt-2 sm:pt-6 lg:pt-8 space-y-2 sm:space-y-6">
           <h3 className="text-lg font-bold text-gray-700 sm:text-xl lg:text-2xl uppercase tracking-wider">TL;DR</h3>
-          <p className="text-xl font-medium text-gray-800 sm:text-2xl lg:text-3xl leading-relaxed max-w-4xl">
+          <p className="text-base font-medium text-gray-800 sm:text-2xl lg:text-3xl leading-relaxed max-w-4xl">
             I'm a builder. Not a frontend dev, not a backend dev, not a designer. I do the whole thing. Design, branding, content, engineering, deployment. 14 years of doing this across startups, fintech, defense tech, and consulting.
           </p>
         </div>

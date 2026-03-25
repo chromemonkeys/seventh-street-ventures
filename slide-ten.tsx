@@ -41,12 +41,12 @@ export default function SlideProduction() {
         }}
       />
 
-      <div className="relative z-10 flex flex-col items-center justify-center h-full w-full max-w-6xl mx-auto py-4 md:py-8">
+      <div className="relative z-10 flex flex-col items-center justify-center h-full w-full max-w-6xl mx-auto py-2 md:py-8">
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 md:mb-8 text-center tracking-tight"
+          className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-2 md:mb-8 text-center tracking-tight"
         >
           Production Context
         </motion.h1>
